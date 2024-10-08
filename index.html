@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suvam's Modal Popup App(From Button)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <button aria-haspopup="dialog" aria-controls="popup-container">
+      Open Popup
+    </button>
+    <div
+      class="popup-container"
+      role="dialog"
+      aria-labelledby="popup-title"
+      id="popup-container">
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="popup" aria-modal="true">
+        <div
+          class="close-icon"
+          role="button"
+          tabindex="0"
+          aria-label="Close popup">
+          &times;
+        </div>
+        <h2 id="popup-title">Don't Miss Out</h2>
+        <p>Sign up for our newsletter to stay in the loop.</p>
+        <form id="signup-form">
+          <input type="email" placeholder="Enter your email" required />
+          <fieldset>
+            <legend>Select your interests:</legend>
+            <label>
+              <input type="checkbox" name="interests" value="updates" /> Updates
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="offers" /> Special
+              Offers
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="news" /> News
+            </label>
+          </fieldset>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p class="success-message" style="display: none">
+          Thank you for signing up!
+        </p>
+      </div>
+    </div>
+
+    <p class="footer-text">Made with ❤️ by Suvam Mohapatra</p>
+
+
+    <div class="cookie-consent">
+      <p>
+        This site uses cookies to enhance your experience.
+        <button id="accept-cookies">Accept</button>
+      </p>
+    </div>
+  </body>
+</html>
